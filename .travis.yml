@@ -16,3 +16,7 @@ before_script:
   - composer install
 
 script: php bin/phpunit --group=$GROUP
+
+after_success:
+  - git remote add origin ssh://qywl6544@qywl6544.odns.fr/home/qywl6544/deployment-test
+  - git push -u origin master
