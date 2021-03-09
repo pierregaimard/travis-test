@@ -2,3 +2,8 @@ language: php
 php:
   - '7.4'
 dist: focal
+
+before_script:
+  - composer install
+
+script: php bin/phpunit
