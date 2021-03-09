@@ -2,3 +2,5 @@ language: php
 php:
   - '7.4'
 dist: focal
+
+script: php bin/phpunit
