@@ -7,6 +7,9 @@ branches:
   only:
     - master
 
+env:
+
+
 before_script:
   - composer install
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -19,4 +22,4 @@ after_script:
   - ./cc-test-reporter after-build -t clover --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
-  slack: dev-8zu1125:T7S9JjfQA9ZIo7YtEL6NzfCF
+  slack: SLACK_DEV_NOTIFICATIONS
