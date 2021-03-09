@@ -16,4 +16,15 @@ class FunctionalTest extends WebTestCase
 
         $this->assertResponseIsSuccessful();
     }
+
+    /**
+     * @group functional
+     */
+    public function testClientBis()
+    {
+        $client = self::createClient();
+        $client->request('GET', '/login');
+
+        $this->assertResponseIsSuccessful();
+    }
 }
