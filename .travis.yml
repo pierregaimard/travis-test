@@ -1,7 +1,12 @@
 language: php
+dist: focal
 php:
   - '7.4'
-dist: focal
+
+# Git branches
+branches:
+  only:
+    - master
 
 before_script:
   - composer install
