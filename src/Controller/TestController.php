@@ -15,4 +15,12 @@ class TestController extends AbstractController
     {
         return new Response('Hello world!');
     }
+
+    /**
+     * @Route("/login", name="login")
+     */
+    public function login()
+    {
+        return new Response('Login page!');
+    }
 }
