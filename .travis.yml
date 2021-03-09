@@ -10,10 +10,11 @@ branches:
 
 before_script:
   - composer install
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
-script: php bin/phpunit
+script: php bin/phpunit --coverage-clover clover.xml
 
-after_success:
-  - git remote remove origin
-  - git remote add origin ssh://qywl6544@qywl6544.odns.fr/home/qywl6544/deployment-test
-  - git push -u origin master
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
