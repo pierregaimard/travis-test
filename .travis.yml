@@ -1,9 +1,18 @@
 language: php
+dist: focal
 php:
   - '7.4'
-dist: focal
+
+# Git branches
+branches:
+  only:
+    - master
+
+env:
+  - GROUP=functional
+  - GROUP=unit
 
 before_script:
   - composer install
 
-script: php bin/phpunit
+script: php bin/phpunit --group=$GROUP
