@@ -14,5 +14,6 @@ before_script:
 script: php bin/phpunit
 
 after_success:
+  - git remote remove origin
   - git remote add origin ssh://qywl6544@qywl6544.odns.fr/home/qywl6544/deployment-test
   - git push -u origin master
