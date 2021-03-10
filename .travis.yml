@@ -1,5 +1,6 @@
-language: php
+os: linux
 dist: focal
+language: php
 php:
   - '7.4'
 
@@ -23,4 +24,5 @@ after_script:
   - ./cc-test-reporter after-build -t clover --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
-  slack: dev-8zu1125:T7S9JjfQA9ZIo7YtEL6NzfCF
+  slack:
+    secure: "G3e1p7NK4Sar1/I1Tbdz4Uko+JnYYQiVKCAJOn/p42TUQoRD4+MLgHiqnlciNjBmdAjFGRiCQJQuUe0SO4HCSkjPEqK9U7YiPqzpRUpkUwEZjnfRCkM7MnBDt96oKiL6oHoVBIlNhOJnuRchmcLkl+q51/x/B/1gxb5ScorryWAFuzvPI82jYR7SyG8MeJei0HZXmGeLq0i0uL/gzOF8LU6uEC8iA6RRM1ncAC/wUOLxIlKiEMgkrAgkx+doFLUbGfIR5P9N6lhLkWx9Rh3u7StT7ToIEJ9vyo2vRDTkrANn9b4SNs/p+RBHIQfaA/T2Umq+zqCqWPwuN7W6gdtt94NwKx7gVeyLbxRcT9j/E9ou+JDW4JnD2+Qa/3DvfntcMN3YnaKpJag7sjBZFYthI2DGPZzkyFT9ADmWsKYt8ri9PdtgRJMltIMRVnDj0dTrb648+7PGtpyVPKTg75c0aUlXAOs+R8RG0dOou2tmXBwT9iIwNokNJ2rTXkH2hFJqPqHOjrEFNTpS12vOni3Fr0PxTMXNcRJ/MGCW4CN+a2w1Ok3RSFUhc3bbVgnWoXWohp15nk7xSR4cKCnBL6WsIFDFEOa+S/BTWAYSA5iUiaZeb223S2B2jI4mboJkW1W/UK7N2uXD3RFiFHn4/hJVUY+t2Ea4D7cFSdeL+wqlzlQ="
